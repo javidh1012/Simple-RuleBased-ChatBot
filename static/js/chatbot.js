@@ -89,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
     authenticatedStudentId = null;
   }
 
-  async function sendMessage(text) {
+  async function sendMessage(text, displayLabel = null) {
     const trimmed = (text || "").trim();
     if (!trimmed) return;
 
-    // Append user message with original text preserved
-    appendMessage("user", trimmed);
+    // Append user message with original text or display label preserved
+    appendMessage("user", displayLabel || trimmed);
 
     // UI busy state
     messageInput.value = "";
@@ -160,7 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".menu-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const command = btn.getAttribute("data-command");
-      sendMessage(command);
+      const label = btn.getAttribute("data-label") || btn.textContent.trim();
+      sendMessage(command, label);
     });
   });
 
