@@ -1,7 +1,11 @@
 # Student Academic Assistant – Rule-Based Chatbot
 
+🌐 **Live Demo:** [https://simple-rulebased-chatbot.onrender.com](https://simple-rulebased-chatbot.onrender.com)
+
 A clean, modern, text-based **Student Academic Assistant** chatbot built using **Python Flask, Jinja2, Bootstrap 5, Vanilla JavaScript, and Pandas**, powered strictly by predefined Python conditional rules and a real Kaggle student performance dataset.
 
+> 🚀 **Live Deployment:** Try the live working application on Render 👉 **[https://simple-rulebased-chatbot.onrender.com](https://simple-rulebased-chatbot.onrender.com)**
+>
 > **Zero External AI / LLM Models:** This application is 100% deterministic and rule-based. No Gemini, OpenAI, or external AI APIs are integrated.
 >
 > **Clean Modern Interface:** Clean, white/light layout with professional typography, simple rounded chat message bubbles, text input only (zero WhatsApp branding, zero voice/audio/speech recognition).
@@ -103,24 +107,32 @@ Scale confirmed: out of 40.
 
 ## 4. How to Run the Application
 
-### Step 1: Install Dependencies
+### 🌐 Live Web Demo
+The application is live and deployed on Render:  
+👉 **[https://simple-rulebased-chatbot.onrender.com](https://simple-rulebased-chatbot.onrender.com)**
+
+---
+
+### Local Installation & Run
+
+#### Step 1: Install Dependencies
 ```powershell
 pip install -r requirements.txt
 ```
 
-### Step 2: Start the Application
+#### Step 2: Start the Application
 
-#### Option A: Local Development (Windows / macOS / Linux)
+##### Option A: Local Development (Windows / macOS / Linux)
 ```powershell
 python app.py
 ```
 
-#### Option B: Production WSGI Deployment with Gunicorn (Linux / Docker / Cloud)
+##### Option B: Production WSGI Deployment with Gunicorn (Linux / Docker / Render)
 ```bash
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
 ```
 
-### Step 3: Open in Browser
+#### Step 3: Open in Browser
 Navigate to:  
 👉 **`http://127.0.0.1:5000`**
 
